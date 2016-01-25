@@ -32,7 +32,8 @@
             this.labelEventImages = new System.Windows.Forms.Label();
             this.listBoxEvents = new System.Windows.Forms.ListBox();
             this.buttonFetchEvents = new System.Windows.Forms.Button();
-            this.gMapControl = new GMap.NET.WindowsForms.GMapControl();
+            this.mapControl = m_Map.MapControl;
+
             this.SuspendLayout();
             // 
             // labelEventImages
@@ -66,37 +67,16 @@
             this.buttonFetchEvents.UseVisualStyleBackColor = true;
             this.buttonFetchEvents.Click += new System.EventHandler(this.buttonFetchEvents_Click);
             // 
-            // gMapControl
+            // MapControl
             // 
-            this.gMapControl.Bearing = 0F;
-            this.gMapControl.CanDragMap = true;
-            this.gMapControl.EmptyTileColor = System.Drawing.Color.Navy;
-            this.gMapControl.GrayScaleMode = false;
-            this.gMapControl.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
-            this.gMapControl.LevelsKeepInMemmory = 5;
-            this.gMapControl.Location = new System.Drawing.Point(284, 12);
-            this.gMapControl.MarkersEnabled = true;
-            this.gMapControl.MaxZoom = 30;
-            this.gMapControl.MinZoom = 1;
-            this.gMapControl.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
-            this.gMapControl.Name = "gMapControl";
-            this.gMapControl.NegativeMode = false;
-            this.gMapControl.PolygonsEnabled = false;
-            this.gMapControl.RetryLoadTile = 0;
-            this.gMapControl.RoutesEnabled = false;
-            this.gMapControl.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
-            this.gMapControl.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
-            this.gMapControl.ShowTileGridLines = false;
-            this.gMapControl.Size = new System.Drawing.Size(315, 302);
-            this.gMapControl.TabIndex = 7;
-            this.gMapControl.Zoom = 0D;
+            this.m_Map.Initialize();
             // 
             // EventLocationsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 326);
-            this.Controls.Add(this.gMapControl);
+            this.Controls.Add(this.mapControl);
             this.Controls.Add(this.labelEventImages);
             this.Controls.Add(this.listBoxEvents);
             this.Controls.Add(this.buttonFetchEvents);
@@ -113,6 +93,6 @@
         private System.Windows.Forms.Label labelEventImages;
         private System.Windows.Forms.ListBox listBoxEvents;
         private System.Windows.Forms.Button buttonFetchEvents;
-        private GMap.NET.WindowsForms.GMapControl gMapControl;
+        private System.Windows.Forms.UserControl mapControl;
     }
 }
