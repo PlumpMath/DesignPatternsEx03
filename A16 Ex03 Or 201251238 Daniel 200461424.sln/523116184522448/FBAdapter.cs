@@ -45,6 +45,7 @@ namespace _523116184522448
         private LoginResult m_Result;
         private List<Photo> m_EventPhotos;
         private Photo m_EventSelectedPhoto;
+        private UserEvents m_UserEvents;
 
         internal UserInfo UserInfo
         {
@@ -54,6 +55,16 @@ namespace _523116184522448
         public IEnumerable<Event> Events 
         {
             get { return m_LoggedInUser.Events; }     
+        }
+
+        public IEnumerable<Event> EventsCreated
+        {
+            get { return m_LoggedInUser.EventsCreated; }
+        }
+
+        public IEnumerable<Event> EventsNotYetReplied
+        {
+            get { return m_LoggedInUser.EventsNotYetReplied; }
         }
 
         public List<string> EventPhotosNames
