@@ -52,7 +52,7 @@ namespace _523116184522448
     {
         
         internal abstract void LoadMap(UserControl i_UserControl, FBAdapter i_FBAdapter);
-        internal abstract void Initialize();
+        internal abstract void Initialize(Int32 i_LocationX, Int32 i_LocationY, Int32 i_Width, Int32 i_Height);
         internal abstract PointLatLng Position { get; set; }
         internal abstract void ZoomAndCenterMarkers();
         internal abstract UserControl MapControl { get; }
@@ -103,7 +103,7 @@ namespace _523116184522448
             }
         }
 
-        internal override void Initialize()
+        internal override void Initialize(Int32 i_LocationX, Int32 i_LocationY, Int32 i_Width, Int32 i_Height)
         {
             m_GMapControl.Bearing = 0F;
             m_GMapControl.CanDragMap = true;
@@ -111,7 +111,7 @@ namespace _523116184522448
             m_GMapControl.GrayScaleMode = false;
             m_GMapControl.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             m_GMapControl.LevelsKeepInMemmory = 5;
-            m_GMapControl.Location = new System.Drawing.Point(284, 12);
+            m_GMapControl.Location = new System.Drawing.Point(i_LocationX, i_LocationY);
             m_GMapControl.MarkersEnabled = true;
             m_GMapControl.MaxZoom = 30;
             m_GMapControl.MinZoom = 1;
@@ -124,7 +124,7 @@ namespace _523116184522448
             m_GMapControl.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             m_GMapControl.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             m_GMapControl.ShowTileGridLines = false;
-            m_GMapControl.Size = new System.Drawing.Size(315, 302);
+            m_GMapControl.Size = new System.Drawing.Size(i_Width, i_Height);
             m_GMapControl.TabIndex = 7;
             m_GMapControl.Zoom = 0D;
         }

@@ -40,9 +40,9 @@
             this.textBoxCommentPhoto = new System.Windows.Forms.TextBox();
             this.buttonPostComment = new System.Windows.Forms.Button();
             this.labelCommentPhoto = new System.Windows.Forms.Label();
-            this.buttonLikePhoto = new System.Windows.Forms.Button();
             this.listBoxComments = new System.Windows.Forms.ListBox();
             this.labelListOfComments = new System.Windows.Forms.Label();
+            this.buttonLikePhoto = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonFetchEvents
@@ -101,13 +101,6 @@
             resources.ApplyResources(this.labelCommentPhoto, "labelCommentPhoto");
             this.labelCommentPhoto.Name = "labelCommentPhoto";
             // 
-            // buttonLikePhoto
-            // 
-            resources.ApplyResources(this.buttonLikePhoto, "buttonLikePhoto");
-            this.buttonLikePhoto.Name = "buttonLikePohto";
-            this.buttonLikePhoto.UseVisualStyleBackColor = true;
-            this.buttonLikePhoto.Click += new System.EventHandler(this.buttonLikePhoto_Click);
-            // 
             // listBoxComments
             // 
             this.listBoxComments.FormattingEnabled = true;
@@ -118,6 +111,13 @@
             // 
             resources.ApplyResources(this.labelListOfComments, "labelListOfComments");
             this.labelListOfComments.Name = "labelListOfComments";
+            // 
+            // buttonLikePhoto
+            // 
+            resources.ApplyResources(this.buttonLikePhoto, "buttonLikePhoto");
+            this.buttonLikePhoto.Name = "buttonLikePhoto";
+            this.buttonLikePhoto.UseVisualStyleBackColor = true;
+            this.buttonLikePhoto.Click += new System.EventHandler(this.buttonLikePhoto_Click);
             // 
             // EventImagesForm
             // 
@@ -153,8 +153,8 @@
         private System.Windows.Forms.TextBox textBoxCommentPhoto;
         private System.Windows.Forms.Button buttonPostComment;
         private System.Windows.Forms.Label labelCommentPhoto;
-        private System.Windows.Forms.Button buttonLikePhoto;
         private System.Windows.Forms.ListBox listBoxComments;
         private System.Windows.Forms.Label labelListOfComments;
+        private System.Windows.Forms.Button buttonLikePhoto;
     }
 }

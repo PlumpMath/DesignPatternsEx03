@@ -69,7 +69,7 @@
             // 
             // MapControl
             // 
-            this.m_Map.Initialize();
+            m_Map.Initialize(284, 12, 315, 302);
             // 
             // EventLocationsForm
             // 
