@@ -73,17 +73,7 @@ namespace _523116184522448
     // This will allow easy replacement of map tool in the future.
     abstract class Map
     {
-        
-        internal abstract void LoadMap(UserControl i_UserControl, FBAdapter i_FBAdapter);
-        internal abstract void Initialize(Int32 i_LocationX, Int32 i_LocationY, Int32 i_Width, Int32 i_Height);
-        internal abstract PointLatLng Position { get; set; }
-        internal abstract void ZoomAndCenterMarkers();
-        internal abstract UserControl MapControl { get; }
-
-        internal void TemplateMethod(UserControl i_UserControl, FBAdapter i_FBAdapter)
-        {
-            LoadMap(i_UserControl, i_FBAdapter);
-        }
+        private UserEvents m_UserEvents;
 
         internal PointLatLng getLatLong(PointD i_location)
         {
@@ -92,6 +82,12 @@ namespace _523116184522448
 
             return coordinates;
         }
+
+        internal abstract void LoadMap(UserControl i_UserControl, FBAdapter i_FBAdapter, IEnumerable<object> i_Events);
+        internal abstract void Initialize(Int32 i_LocationX, Int32 i_LocationY, Int32 i_Width, Int32 i_Height);
+        internal abstract PointLatLng Position { get; set; }
+        internal abstract void ZoomAndCenterMarkers();
+        internal abstract UserControl MapControl { get; }
     }
 
     class GreatMap : Map
@@ -151,14 +147,14 @@ namespace _523116184522448
             m_GMapControl.Zoom = 0D;
         }
 
-        internal override void LoadMap(UserControl i_UserControl, FBAdapter i_FBAdapter)
+        internal override void LoadMap(UserControl i_UserControl, FBAdapter i_FBAdapter, IEnumerable<object> i_Events)
         {
             GMapControl gMapControl = i_UserControl as GMapControl;
 
             gMapControl.Invoke(new Action(() => gMapControl.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance));
             gMapControl.Invoke(new Action(() => gMapControl.SetPositionByKeywords("dubnov, Tel Aviv, Israel")));
             m_MarkersOverlay = new GMapOverlay("markers");
-            foreach (object fbEvent in i_FBAdapter.Events)
+            foreach (object fbEvent in i_Events)
             {
                 if (i_FBAdapter.HasLocationEvent(fbEvent))
                 {
