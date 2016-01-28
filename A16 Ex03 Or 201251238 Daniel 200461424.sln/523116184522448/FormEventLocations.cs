@@ -5,27 +5,28 @@ using System.Windows.Forms;
 
 namespace _523116184522448
 {
-    public partial class EventLocationsForm : Form
+    internal partial class FormEventLocations : Form
     {
         private FBAdapter m_FBAdapter;
-        private Map m_Map = new GreatMap();
-        UserEvents m_UserEvents;
+        private Map m_Map;
+        private UserEvents m_UserEvents;
 
-        public FBAdapter FBUtilities 
+        internal FormEventLocations()
+        {
+            InitializeComponent();
+            m_Map = new GreatMap();
+            this.mapControl = m_Map.MapControl;
+            m_Map.Initialize(284, 12, 315, 302);
+            this.Controls.Add(this.mapControl);
+        }
+
+        internal FBAdapter FBUtilities 
         {
             set {
                 m_FBAdapter = value;
                 m_UserEvents = new UserEvents(m_FBAdapter);
                 m_UserEvents.SetEventsStrategy(new AllAttendingEvents());
             }
-        }
-
-        public EventLocationsForm()
-        {
-            InitializeComponent();
-            this.mapControl = m_Map.MapControl;
-            m_Map.Initialize(284, 12, 315, 302);
-            this.Controls.Add(this.mapControl);
         }
 
         private void buttonFetchEvents_Click(object sender, EventArgs e)
@@ -46,17 +47,17 @@ namespace _523116184522448
             }
         }
 
-        private void radioButtonAllEvents_CheckedChanged(object sender, EventArgs e)
+        private void radioButtonAllEvents_Checked(object sender, EventArgs e)
         {
             m_UserEvents.SetEventsStrategy(new AllAttendingEvents());
         }
 
-        private void radioButtonEventsCreated_CheckedChanged(object sender, EventArgs e)
+        private void radioButtonEventsCreated_Checked(object sender, EventArgs e)
         {
             m_UserEvents.SetEventsStrategy(new EventsCreated());
         }
 
-        private void radioButtonEventsNotReplied_CheckedChanged(object sender, EventArgs e)
+        private void radioButtonEventsNotReplied_Checked(object sender, EventArgs e)
         {
             m_UserEvents.SetEventsStrategy(new EventsNotReplied());
         }

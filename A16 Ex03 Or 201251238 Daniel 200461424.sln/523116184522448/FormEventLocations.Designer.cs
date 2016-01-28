@@ -1,6 +1,6 @@
 ﻿namespace _523116184522448
 {
-    public partial class EventLocationsForm
+    internal partial class FormEventLocations
     {
         /// <summary>
         /// Required designer variable.
@@ -92,7 +92,7 @@
             this.radioButtonEventsNotReplied.Text = "Events Not Yet Replied";
             this.radioButtonEventsNotReplied.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.radioButtonEventsNotReplied.UseVisualStyleBackColor = true;
-            this.radioButtonEventsNotReplied.CheckedChanged += new System.EventHandler(this.radioButtonEventsNotReplied_CheckedChanged);
+            this.radioButtonEventsNotReplied.CheckedChanged += new System.EventHandler(this.radioButtonEventsNotReplied_Checked);
             // 
             // radioButtonEventsCreated
             // 
@@ -104,7 +104,7 @@
             this.radioButtonEventsCreated.TabStop = true;
             this.radioButtonEventsCreated.Text = "Events Created";
             this.radioButtonEventsCreated.UseVisualStyleBackColor = true;
-            this.radioButtonEventsCreated.CheckedChanged += new System.EventHandler(this.radioButtonEventsCreated_CheckedChanged);
+            this.radioButtonEventsCreated.CheckedChanged += new System.EventHandler(this.radioButtonEventsCreated_Checked);
             // 
             // radioButtonAllEvents
             // 
@@ -117,7 +117,7 @@
             this.radioButtonAllEvents.Text = "Events marked: \"Attending\"";
             this.radioButtonAllEvents.UseVisualStyleBackColor = true;
             this.radioButtonAllEvents.Checked = true;
-            this.radioButtonAllEvents.CheckedChanged += new System.EventHandler(this.radioButtonAllEvents_CheckedChanged);
+            this.radioButtonAllEvents.CheckedChanged += new System.EventHandler(this.radioButtonAllEvents_Checked);
             // 
             // EventLocationsForm
             // 
