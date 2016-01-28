@@ -119,10 +119,10 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonFetchEvents.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 335</value>
+    <value>91, 368</value>
   </data>
   <data name="buttonFetchEvents.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 49</value>
+    <value>149, 43</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonFetchEvents.TabIndex" type="System.Int32, mscorlib">
@@ -141,7 +141,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonFetchEvents.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="listBoxEvents.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 27</value>
@@ -162,7 +162,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;listBoxEvents.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <metadata name="imageListEventImages.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -174,7 +174,7 @@
     <value>334, 27</value>
   </data>
   <data name="listView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 290</value>
+    <value>316, 348</value>
   </data>
   <data name="listView.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -189,7 +189,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;listView.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="labelEventImages.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -216,7 +216,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelEventImages.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="labelPhotosList.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -243,13 +243,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelPhotosList.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="textBoxCommentPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>656, 335</value>
+    <value>656, 334</value>
   </data>
   <data name="textBoxCommentPhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 20</value>
+    <value>314, 20</value>
   </data>
   <data name="textBoxCommentPhoto.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -264,13 +264,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxCommentPhoto.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="buttonPostComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>788, 361</value>
+    <value>765, 368</value>
   </data>
   <data name="buttonPostComment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 23</value>
+    <value>94, 43</value>
   </data>
   <data name="buttonPostComment.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -288,7 +288,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonPostComment.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="labelCommentPhoto.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -297,13 +297,13 @@
     <value>745, 319</value>
   </data>
   <data name="labelCommentPhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 13</value>
+    <value>144, 13</value>
   </data>
   <data name="labelCommentPhoto.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="labelCommentPhoto.Text" xml:space="preserve">
-    <value>Post a Comment to this photo</value>
+    <value>Post a comment to this photo</value>
   </data>
   <data name="&gt;&gt;labelCommentPhoto.Name" xml:space="preserve">
     <value>labelCommentPhoto</value>
@@ -315,7 +315,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelCommentPhoto.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="listBoxComments.Location" type="System.Drawing.Point, System.Drawing">
     <value>656, 27</value>
@@ -336,7 +336,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;listBoxComments.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="labelListOfComments.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -363,23 +363,23 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelListOfComments.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonLikePhoto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="buttonLikePhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>436, 332</value>
+    <value>429, 381</value>
   </data>
   <data name="buttonLikePhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 23</value>
+    <value>126, 30</value>
   </data>
   <data name="buttonLikePhoto.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
   <data name="buttonLikePhoto.Text" xml:space="preserve">
-    <value>Like Selected Photo</value>
+    <value>Like this photo!</value>
   </data>
   <data name="&gt;&gt;buttonLikePhoto.Name" xml:space="preserve">
     <value>buttonLikePhoto</value>
@@ -391,7 +391,91 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonLikePhoto.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelFilter.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 326</value>
+  </data>
+  <data name="labelFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 13</value>
+  </data>
+  <data name="labelFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="labelFilter.Text" xml:space="preserve">
+    <value>Type a filter color for the photos</value>
+  </data>
+  <data name="&gt;&gt;labelFilter.Name" xml:space="preserve">
+    <value>labelFilter</value>
+  </data>
+  <data name="&gt;&gt;labelFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFilter.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelFilter.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBoxFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 334</value>
+  </data>
+  <data name="textBoxFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 20</value>
+  </data>
+  <data name="textBoxFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="textBoxFilter.Text" xml:space="preserve">
+    <value>no-filter</value>
+  </data>
+  <data name="&gt;&gt;textBoxFilter.Name" xml:space="preserve">
+    <value>textBoxFilter</value>
+  </data>
+  <data name="&gt;&gt;textBoxFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxFilter.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxFilter.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="labelFilterOptions.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelFilterOptions.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelFilterOptions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 341</value>
+  </data>
+  <data name="labelFilterOptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 13</value>
+  </data>
+  <data name="labelFilterOptions.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="labelFilterOptions.Text" xml:space="preserve">
+    <value>(red, green, blue or negative)</value>
+  </data>
+  <data name="&gt;&gt;labelFilterOptions.Name" xml:space="preserve">
+    <value>labelFilterOptions</value>
+  </data>
+  <data name="&gt;&gt;labelFilterOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFilterOptions.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelFilterOptions.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -406,7 +490,7 @@
     <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>982, 389</value>
+    <value>982, 418</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Images From Events</value>

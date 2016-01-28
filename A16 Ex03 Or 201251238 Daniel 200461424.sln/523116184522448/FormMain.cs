@@ -14,7 +14,7 @@ namespace _523116184522448
 {
     public partial class FormMain : Form
     {
-        private EventImagesForm m_ImagesFromEventsFrom;
+        private FormEventImages m_ImagesFromEventsFrom;
         private EventLocationsForm m_EventLocationForm;
         private FBAdapter m_FBAdapter;
 
@@ -59,7 +59,7 @@ namespace _523116184522448
 
         private void buttonEventImages_Click(object sender, EventArgs e)
         {
-            m_ImagesFromEventsFrom = new EventImagesForm();
+            m_ImagesFromEventsFrom = new FormEventImages();
             m_ImagesFromEventsFrom.FBUtilities = m_FBAdapter;
             m_ImagesFromEventsFrom.Show();
         }

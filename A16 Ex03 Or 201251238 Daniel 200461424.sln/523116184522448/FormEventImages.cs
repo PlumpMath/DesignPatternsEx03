@@ -11,21 +11,35 @@ using _EventFullyApp;
 
 namespace _523116184522448
 {
-    public partial class EventImagesForm : Form
+    public partial class FormEventImages : Form
     {
         private const int k_NumOfImages = 5;
         private FBAdapter m_FBAdapter;
-        private ImageContainerFacade m_ImageContainerFacade; 
+        private ImageContainerFacade m_ImageContainerFacade;
+        private FilterChain m_ImageFilter;
 
         public FBAdapter FBUtilities
         {
             set { m_FBAdapter = value; }
         }
 
-        public EventImagesForm()
+        public FormEventImages()
         {
             InitializeComponent();
             m_ImageContainerFacade = new ImageContainerFacade { ImageList = imageListEventImages, ListView = listView };
+            buildChainOfFilters(out m_ImageFilter);
+        }
+
+        private void buildChainOfFilters(out FilterChain o_ImageFilter)
+        {
+            NegativeFilter negativeFilter =  new NegativeFilter();
+            RedFilter redFilter = new RedFilter();
+            GreenFilter greenFilter = new GreenFilter();
+            BlueFilter blueFilter = new BlueFilter();
+            negativeFilter.SetNextChain(redFilter);
+            redFilter.SetNextChain(greenFilter);
+            greenFilter.SetNextChain(blueFilter);
+            o_ImageFilter = negativeFilter;
         }
 
         // button 'buttonFetchEvents' clicked
@@ -56,7 +70,7 @@ namespace _523116184522448
                 m_FBAdapter.EventSelectedPhoto = selectedIndex;
                 new Thread(
                     () => m_FBAdapter.FetchCollectionAsync(listBoxComments, m_FBAdapter.EventPhotoComments, "Message")).Start();
-            }      
+            }
         }
 
         // button 'buttonlikePhoto' clicked
@@ -166,7 +180,7 @@ namespace _523116184522448
 
             responseStream.Dispose();
 
-            return bmp;
+            return m_ImageFilter.ApplyFilter(bmp, textBoxFilter.Text);
         }
     }
 }

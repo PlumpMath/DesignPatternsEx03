@@ -60,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlueFilter.cs" />
+    <Compile Include="FilterChain.cs" />
     <Compile Include="FormEventLocations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,7 +80,10 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GreenFilter.cs" />
     <Compile Include="ImageContainerFacade.cs" />
+    <Compile Include="RedFilter.cs" />
+    <Compile Include="NegativeFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FBAdapter.cs" />

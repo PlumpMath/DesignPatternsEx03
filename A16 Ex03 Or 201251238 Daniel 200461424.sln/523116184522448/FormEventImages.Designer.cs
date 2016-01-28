@@ -1,6 +1,6 @@
 ﻿namespace _523116184522448
 {
-    public partial class EventImagesForm
+    public partial class FormEventImages
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventImagesForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEventImages));
             this.buttonFetchEvents = new System.Windows.Forms.Button();
             this.listBoxEvents = new System.Windows.Forms.ListBox();
             this.listView = new System.Windows.Forms.ListView();
@@ -43,6 +43,9 @@
             this.listBoxComments = new System.Windows.Forms.ListBox();
             this.labelListOfComments = new System.Windows.Forms.Label();
             this.buttonLikePhoto = new System.Windows.Forms.Button();
+            this.labelFilter = new System.Windows.Forms.Label();
+            this.textBoxFilter = new System.Windows.Forms.TextBox();
+            this.labelFilterOptions = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonFetchEvents
@@ -119,10 +122,28 @@
             this.buttonLikePhoto.UseVisualStyleBackColor = true;
             this.buttonLikePhoto.Click += new System.EventHandler(this.buttonLikePhoto_Click);
             // 
+            // labelFilter
+            // 
+            resources.ApplyResources(this.labelFilter, "labelFilter");
+            this.labelFilter.Name = "labelFilter";
+            // 
+            // textBoxFilter
+            // 
+            resources.ApplyResources(this.textBoxFilter, "textBoxFilter");
+            this.textBoxFilter.Name = "textBoxFilter";
+            // 
+            // labelFilterOptions
+            // 
+            resources.ApplyResources(this.labelFilterOptions, "labelFilterOptions");
+            this.labelFilterOptions.Name = "labelFilterOptions";
+            // 
             // EventImagesForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelFilterOptions);
+            this.Controls.Add(this.labelFilter);
+            this.Controls.Add(this.textBoxFilter);
             this.Controls.Add(this.labelListOfComments);
             this.Controls.Add(this.listBoxComments);
             this.Controls.Add(this.buttonLikePhoto);
@@ -156,5 +177,8 @@
         private System.Windows.Forms.ListBox listBoxComments;
         private System.Windows.Forms.Label labelListOfComments;
         private System.Windows.Forms.Button buttonLikePhoto;
+        private System.Windows.Forms.Label labelFilter;
+        private System.Windows.Forms.TextBox textBoxFilter;
+        private System.Windows.Forms.Label labelFilterOptions;
     }
 }
