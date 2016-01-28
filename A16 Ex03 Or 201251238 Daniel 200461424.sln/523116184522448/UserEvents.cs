@@ -10,7 +10,7 @@ namespace _523116184522448
 {
     internal class UserEvents
     {
-        private EventsStrategy m_EventsStrategy;
+        private IEventsStrategy m_EventsStrategy;
         private FBAdapter m_FBAdapter;
 
         internal UserEvents(FBAdapter i_FBAdapter)
@@ -18,7 +18,7 @@ namespace _523116184522448
             m_FBAdapter = i_FBAdapter;
         }
 
-        internal void SetEventsStrategy(EventsStrategy i_EventsStrategy)
+        internal void SetEventsStrategy(IEventsStrategy i_EventsStrategy)
         {
             this.m_EventsStrategy = i_EventsStrategy;
         }
@@ -29,12 +29,12 @@ namespace _523116184522448
         }
     }
 
-    internal interface EventsStrategy
+    internal interface IEventsStrategy
     {
         IEnumerable<Event> GetEvents(FBAdapter i_FBAdapter);
     }
 
-    internal class AllAttendingEvents : EventsStrategy
+    internal class AllAttendingEvents : IEventsStrategy
     {
         public IEnumerable<Event> GetEvents(FBAdapter i_FBAdapter)
         {
@@ -42,7 +42,7 @@ namespace _523116184522448
         }
     }
 
-    internal class EventsCreated : EventsStrategy
+    internal class EventsCreated : IEventsStrategy
     {
         public IEnumerable<Event> GetEvents(FBAdapter i_FBAdapter)
         {
@@ -50,7 +50,7 @@ namespace _523116184522448
         }
     }
 
-    internal class EventsNotReplied : EventsStrategy
+    internal class EventsNotReplied : IEventsStrategy
     {
         public IEnumerable<Event> GetEvents(FBAdapter i_FBAdapter)
         {
