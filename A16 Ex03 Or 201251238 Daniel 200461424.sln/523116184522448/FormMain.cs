@@ -12,13 +12,13 @@ using Facebook;
 
 namespace _523116184522448
 {
-    public partial class MainForm : Form
+    public partial class FormMain : Form
     {
         private EventImagesForm m_ImagesFromEventsFrom;
         private EventLocationsForm m_EventLocationForm;
         private FBAdapter m_FBAdapter;
 
-        public MainForm()
+        public FormMain()
         {
             m_FBAdapter = FBAdapter.Instance;
             InitializeComponent();

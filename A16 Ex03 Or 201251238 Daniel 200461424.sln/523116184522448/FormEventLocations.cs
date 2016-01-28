@@ -74,6 +74,7 @@ namespace _523116184522448
     abstract class Map
     {
         private UserEvents m_UserEvents;
+        internal UserControl m_MapControl;
 
         internal PointLatLng GetLatLong(PointD i_location)
         {
@@ -83,7 +84,17 @@ namespace _523116184522448
             return coordinates;
         }
 
-        internal abstract void LoadMap(UserControl i_UserControl, FBAdapter i_FBAdapter, IEnumerable<object> i_Events);
+        internal void LoadMap(UserControl i_UserControl, FBAdapter i_FBAdapter, IEnumerable<object> i_Events)
+        {
+            //Set control
+            SetControl(i_UserControl);
+
+            //Update map
+            UpdateMap(i_FBAdapter, i_Events);
+        }
+
+        internal abstract void SetControl(UserControl i_UserControl);
+        internal abstract void UpdateMap(FBAdapter i_FBAdapter, IEnumerable<object> i_Events);
         internal abstract void Initialize(Int32 i_LocationX, Int32 i_LocationY, Int32 i_Width, Int32 i_Height);
         internal abstract PointLatLng Position { get; set; }
         internal abstract void ZoomAndCenterMarkers();
@@ -147,9 +158,14 @@ namespace _523116184522448
             m_GMapControl.Zoom = 0D;
         }
 
-        internal override void LoadMap(UserControl i_UserControl, FBAdapter i_FBAdapter, IEnumerable<object> i_Events)
+        internal override void SetControl(UserControl i_UserControl)
         {
-            GMapControl gMapControl = i_UserControl as GMapControl;
+            m_MapControl = i_UserControl as GMapControl;
+        }
+        internal override void UpdateMap(FBAdapter i_FBAdapter, IEnumerable<object> i_Events)
+        {
+            GMapControl gMapControl = m_MapControl as GMapControl;
+
             gMapControl.Overlays.Clear();
             gMapControl.Invoke(new Action(() => gMapControl.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance));
             gMapControl.Invoke(new Action(() => gMapControl.SetPositionByKeywords("dubnov, Tel Aviv, Israel")));

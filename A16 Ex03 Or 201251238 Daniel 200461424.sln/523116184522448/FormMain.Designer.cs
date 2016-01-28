@@ -2,7 +2,7 @@
 
 namespace _523116184522448
 {
-    public partial class MainForm
+    public partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -115,7 +115,7 @@ namespace _523116184522448
             // 
             this.userInfoBindingSource.DataSource = typeof(_523116184522448.UserInfo);
             // 
-            // MainForm
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,7 +129,7 @@ namespace _523116184522448
             this.Controls.Add(this.buttonLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "MainForm";
+            this.Name = "FormMain";
             this.Text = "Welcome";
             ((System.ComponentModel.ISupportInitialize)(this.profilePitcturePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userInfoBindingSource)).EndInit();
