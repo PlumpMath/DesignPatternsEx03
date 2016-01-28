@@ -23,7 +23,7 @@ namespace _523116184522448
             set {
                 m_FBAdapter = value;
                 m_UserEvents = new UserEvents(m_FBAdapter);
-                m_UserEvents.SetEventsStrategy(new AllEvents());
+                m_UserEvents.SetEventsStrategy(new AllAttendingEvents());
             }
         }
 
@@ -38,14 +38,14 @@ namespace _523116184522448
         private void buttonFetchEvents_Click(object sender, EventArgs e)
         {
             new Thread(() => m_FBAdapter.FetchCollectionAsync(listBoxEvents, m_UserEvents.GetEvents(), "Name")).Start();
-            new Thread(() => m_Map.LoadMap(mapControl, m_FBAdapter)).Start();
+            new Thread(() => m_Map.LoadMap(mapControl, m_FBAdapter, m_UserEvents.GetEvents())).Start();
         }
 
         private void listBoxEvents_SelectedIndexChanged(object sender, EventArgs e)
         {       
             if (m_FBAdapter.HasLocationEvent(listBoxEvents.SelectedItem))
             {
-                m_Map.Position = m_Map.getLatLong(m_FBAdapter.GetLatLong(listBoxEvents.SelectedItem));
+                m_Map.Position = m_Map.GetLatLong(m_FBAdapter.GetLatLong(listBoxEvents.SelectedItem));
             }
             else
             {
@@ -55,7 +55,7 @@ namespace _523116184522448
 
         private void radioButtonAllEvents_CheckedChanged(object sender, EventArgs e)
         {
-            m_UserEvents.SetEventsStrategy(new AllEvents());
+            m_UserEvents.SetEventsStrategy(new AllAttendingEvents());
         }
 
         private void radioButtonEventsCreated_CheckedChanged(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace _523116184522448
     {
         private UserEvents m_UserEvents;
 
-        internal PointLatLng getLatLong(PointD i_location)
+        internal PointLatLng GetLatLong(PointD i_location)
         {
             PointLatLng coordinates;
             coordinates = new PointLatLng(i_location.X, i_location.Y);
@@ -150,7 +150,7 @@ namespace _523116184522448
         internal override void LoadMap(UserControl i_UserControl, FBAdapter i_FBAdapter, IEnumerable<object> i_Events)
         {
             GMapControl gMapControl = i_UserControl as GMapControl;
-
+            gMapControl.Overlays.Clear();
             gMapControl.Invoke(new Action(() => gMapControl.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance));
             gMapControl.Invoke(new Action(() => gMapControl.SetPositionByKeywords("dubnov, Tel Aviv, Israel")));
             m_MarkersOverlay = new GMapOverlay("markers");
@@ -158,7 +158,7 @@ namespace _523116184522448
             {
                 if (i_FBAdapter.HasLocationEvent(fbEvent))
                 {
-                    PointLatLng point = getLatLong(i_FBAdapter.GetLatLong(fbEvent));
+                    PointLatLng point = GetLatLong(i_FBAdapter.GetLatLong(fbEvent));
                     GMap.NET.WindowsForms.Markers.GMarkerGoogle marker = new GMap.NET.WindowsForms.Markers.GMarkerGoogle(
                         point,
                         GMap.NET.WindowsForms.Markers.GMarkerGoogleType.red_small);

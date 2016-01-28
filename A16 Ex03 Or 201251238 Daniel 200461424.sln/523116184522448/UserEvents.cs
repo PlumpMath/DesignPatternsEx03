@@ -34,7 +34,7 @@ namespace _523116184522448
         IEnumerable<Event> GetEvents(FBAdapter i_FBAdapter);
     }
 
-    internal class AllEvents : EventsStrategy
+    internal class AllAttendingEvents : EventsStrategy
     {
         public IEnumerable<Event> GetEvents(FBAdapter i_FBAdapter)
         {

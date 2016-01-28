@@ -114,7 +114,7 @@
             this.radioButtonAllEvents.Size = new System.Drawing.Size(72, 17);
             this.radioButtonAllEvents.TabIndex = 5;
             this.radioButtonAllEvents.TabStop = true;
-            this.radioButtonAllEvents.Text = "All Events";
+            this.radioButtonAllEvents.Text = "Events marked: \"Attending\"";
             this.radioButtonAllEvents.UseVisualStyleBackColor = true;
             this.radioButtonAllEvents.Checked = true;
             this.radioButtonAllEvents.CheckedChanged += new System.EventHandler(this.radioButtonAllEvents_CheckedChanged);
